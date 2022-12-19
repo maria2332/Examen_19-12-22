@@ -18,25 +18,25 @@ import numpy as pd
 
 def numeroLetras(numero):
     if numero == 0:
-        return "zero"
+        return "cero"
     if numero == 1:
-        return "one"
+        return "uno"
     if numero == 2:
-        return "two"
+        return "dos"
     if numero == 3:
-        return "three"
+        return "tres"
     if numero == 4:
-        return "four"
+        return "cuatro"
     if numero == 5:
-        return "five"
+        return "cinco"
     if numero == 6:
-        return "six"
+        return "seis"
     if numero == 7:
-        return "seven"
+        return "siete"
     if numero == 8:
-        return "eight"
+        return "ocho"
     if numero == 9:
-        return "nine"
+        return "nueve"
 
 def numbersOfLetters(numero):
     if numero < 0 or numero > 999:
@@ -44,25 +44,25 @@ def numbersOfLetters(numero):
     numero = str(numero)
     for i in range(len(numero)):
         if numero[i] == "0":
-            numero = numero.replace("0", "zero")
+            numero = numero.replace("0", "cero")
         if numero[i] == "1":
-            numero = numero.replace("1", "one")
+            numero = numero.replace("1", "uno")
         if numero[i] == "2":
-            numero = numero.replace("2", "two")
+            numero = numero.replace("2", "dos")
         if numero[i] == "3":
-            numero = numero.replace("3", "three")
+            numero = numero.replace("3", "tres")
         if numero[i] == "4":
-            numero = numero.replace("4", "four")
+            numero = numero.replace("4", "cuatro")
         if numero[i] == "5":
-            numero = numero.replace("5", "five")
+            numero = numero.replace("5", "cinco")
         if numero[i] == "6":
-            numero = numero.replace("6", "six")
+            numero = numero.replace("6", "seis")
         if numero[i] == "7":
-            numero = numero.replace("7", "seven")
+            numero = numero.replace("7", "siete")
         if numero[i] == "8":
-            numero = numero.replace("8", "eight")
+            numero = numero.replace("8", "ocho")
         if numero[i] == "9":
-            numero = numero.replace("9", "nine")
+            numero = numero.replace("9", "nueve")
     numero = numero.split()
     return numero
 
