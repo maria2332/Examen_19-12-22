@@ -29,9 +29,14 @@ la cadena de entrada puede contener variables arbitrarias representadas por cara
 from ast import main
 import numpy as np
 
-def simplify(poly):
-    # your code here
-    return poly
+def simplify(poli):
+    poli = poli.replace(' ', '')
+    poli = poli.replace('-', '+-')
+    poli = poli.split('+')
+    poli = [i for i in poli if i != '']
+    poli = [i for i in poli if i != '+']
+    poli = [i for i in poli if i != '-']
+   
 
 if __name__ == '__main__':
     main()
