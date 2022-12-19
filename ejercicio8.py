@@ -11,3 +11,18 @@ La mejor forma de detectar a Monstruo del Lago Ness es utilizando una expresión
 
 Para ello, se puede usar el módulo re y su función search(), que buscará la primera coincidencia en la cadena de texto.
 """
+
+from ast import main
+import numpy as np
+
+def monstruo_del_lago_ness(cadena):
+    import re
+    patron = re.compile(r"tree fiddy|3\.50|three fifty")
+    coincidencia = re.search(patron, cadena)
+    if coincidencia:
+        return True
+    else:
+        return False
+
+if __name__ == "__main__":
+    main()
