@@ -39,12 +39,32 @@ def numeroLetras(numero):
         return "nine"
 
 def numbersOfLetters(numero):
-    numero = []
-    numero.escrito=numero.append(numeroLetras(numero))
-    numero.
-    if len(numero.escrito) ==
-    
-
+    if numero < 0 or numero > 999:
+        return "Error, el numero debe estar entre 0 y 999"
+    numero = str(numero)
+    for i in range(len(numero)):
+        if numero[i] == "0":
+            numero = numero.replace("0", "zero")
+        if numero[i] == "1":
+            numero = numero.replace("1", "one")
+        if numero[i] == "2":
+            numero = numero.replace("2", "two")
+        if numero[i] == "3":
+            numero = numero.replace("3", "three")
+        if numero[i] == "4":
+            numero = numero.replace("4", "four")
+        if numero[i] == "5":
+            numero = numero.replace("5", "five")
+        if numero[i] == "6":
+            numero = numero.replace("6", "six")
+        if numero[i] == "7":
+            numero = numero.replace("7", "seven")
+        if numero[i] == "8":
+            numero = numero.replace("8", "eight")
+        if numero[i] == "9":
+            numero = numero.replace("9", "nine")
+    numero = numero.split()
+    return numero
 
 
 
