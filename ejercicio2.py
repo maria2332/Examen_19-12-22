@@ -27,7 +27,6 @@ la cadena de entrada puede contener variables arbitrarias representadas por cara
 """
 
 from ast import main
-import numpy as np
 
 def simplify(poli):
     poli = poli.replace(' ', '')

@@ -14,7 +14,6 @@ numbersOfLetters(1) --> ["one", "three", "five", "four"]
 """
 
 from ast import main
-import numpy as pd
 
 def numeroLetras(numero):
     if numero == 0:

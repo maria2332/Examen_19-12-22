@@ -13,12 +13,11 @@ Para ello, se puede usar el módulo re y su función search(), que buscará la p
 """
 
 from ast import main
-import numpy as np
 
 def monstruo_del_lago_ness(cadena):
     import re
-    patron = re.compile(r"tree fiddy|3\.50|three fifty")
-    coincidencia = re.search(patron, cadena)
+    patron = re.compile(r"tree fiddy|3\.50|three fifty") # patron a buscar
+    coincidencia = re.search(patron, cadena) # busca la primera coincidencia
     if coincidencia:
         return True
     else:

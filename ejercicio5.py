@@ -58,14 +58,13 @@ Rellene los espacios con guiones bajos, es decir, _ para que cada línea tenga l
 """
 
 from ast import main
-import numpy as np
 
 def hollow_triangle(filas):
-    for i in range(1,filas+1):
+    for i in range(1,filas+1): 
         if i == 1:
             print(" "*(filas-i)+"#"+" "*(filas-i))
         elif i == filas:
-            print("#"*(filas*2-1))
+            print("#"*(filas*2-1)) 
         else:
             print(" "*(filas-i)+"#"+" "*(i*2-3)+"#"+" "*(filas-i))
 

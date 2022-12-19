@@ -45,7 +45,7 @@ import numpy as pd
 
 class Nonogram:
     def __init__(self, pista):
-        self.clues = pista
+        self.clues = pista 
         self.clues_colum = pista[0]
         self.clues_fila = pista[1]
         self.size = len(self.clues_colum)

@@ -32,15 +32,14 @@ Para implementar una función que calcule la secuencia de Xbonacci dado un núme
 """
 
 from ast import main
-import numpy as np
 
 def xbonacci(firma, n):
     final = []
     for i in range(n):
-        if i < len(firma):
-            final.append(firma[i])
+        if i < len(firma): # Si el indice es menor que la longitud de la firma
+            final.append(firma[i]) # Agregamos el elemento de la firma
         else:
-            final.append(sum(final[-len(firma):]))
+            final.append(sum(final[-len(firma):])) # Sumamos los ultimos elementos de la firma
     return final
 
 if __name__ == "__main__":
