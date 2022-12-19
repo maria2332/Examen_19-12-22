@@ -17,42 +17,31 @@ from ast import main
 import numpy as np
 
 def caballo(pos1, pos2):
-    # Convertimos las posiciones a coordenadas
     pos1 = algebraic_to_numeric(pos1)
     pos2 = algebraic_to_numeric(pos2)
 
-    # Creamos el tablero de ajedrez
     tablero = np.zeros((8, 8))
 
-    # Marcamos la posición inicial y final
-    tablero[pos1] = 0
-    tablero[pos2] = 1
+    tablero[pos1] = 0 # Posición inicial
+    tablero[pos2] = 1 # Posición final
 
-    # Inicializamos la cola de búsqueda
     queue = [pos1]
 
-    # Inicializamos el contador de movimientos
-    movimientos = 0
+    movimientos = 0 # Contador de movimientos
 
-    # Mientras haya posiciones en la cola de búsqueda
     while queue:
-        # Obtenemos la posición actual
-        current_pos = queue.pop(0)
+        current_pos = queue.pop(0) # Obtenemos la posición actual
 
-        # Si la posición actual es la posición final, terminamos
         if tablero[current_pos] == 1:
             break
 
-        # Obtenemos las posiciones a las que el caballo puede moverse
-        possible_moves = get_possible_moves(current_pos)
+        mov_posibles = obtener_movimientos_posibles(current_pos)
 
-        # Agregamos las posiciones válidas a la cola de búsqueda
-        for move in possible_moves:
-            if is_valid_move(move, tablero):
+        for move in mov_posibles:
+            if mov_valido(move, tablero):
                 queue.append(move)
 
-        # Incrementamos el contador de movimientos
-        movimientos += 1
+        movimientos += 1 # Incrementamos el contador de movimientos
 
     return movimientos
 
@@ -63,30 +52,28 @@ def algebraic_to_numeric(pos):
 
     return (row, col)
 
-def get_possible_moves(pos):
-    # Obtenemos la fila y columna de la posición actual
-    row, col = pos
+def obtener_movimientos_posibles(pos):
+    fila, col = pos
 
     # Calculamos las posiciones a las que puede moverse el caballo
     movimientos = [
-        (row + 2, col + 1),
-        (row + 2, col - 1),
-        (row - 2, col + 1),
-        (row - 2, col - 1),
-        (row + 1, col + 2),
-        (row + 1, col - 2),
-        (row - 1, col + 2),
-        (row - 1, col - 2)
+        (fila + 2, col + 1),
+        (fila + 2, col - 1),
+        (fila - 2, col + 1),
+        (fila - 2, col - 1),
+        (fila + 1, col + 2),
+        (fila + 1, col - 2),
+        (fila - 1, col + 2),
+        (fila - 1, col - 2)
     ]
 
     return movimientos
 
-def is_valid_move(pos, tablero):
-    # Obtenemos la fila y columna de la posición actual
-    row, col = pos
+def mov_valido(pos, tablero):
+    fila, col = pos
 
     # Verificamos que la posición esté dentro del tablero
-    if row < 0 or row >= 8:
+    if fila < 0 or fila >= 8:
         return False
     if col < 0 or col >= 8:
         return False
