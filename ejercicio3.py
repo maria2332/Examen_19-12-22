@@ -12,3 +12,14 @@ Ejemplos
 numbersOfLetters(60) --> ["sixzero", "seven", "five", "four"]
 numbersOfLetters(1) --> ["one", "three", "five", "four"]
 """
+
+from ast import main
+import numpy as np
+
+def numbersOfLetters(n):
+    # your code here
+    return
+
+if __name__ == "__main__":
+    main()
+    
