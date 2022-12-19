@@ -40,6 +40,7 @@ En la tupla, debe usar 0 para un cuadrado vacío y 1 para un cuadrado lleno. Por
  (0, 1, 1, 1, 1))
 """
 
+#https://github.com/maria2332/Examen_19-12-22.git
 from ast import main
 import numpy as pd
 
