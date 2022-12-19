@@ -39,3 +39,51 @@ En la tupla, debe usar 0 para un cuadrado vacío y 1 para un cuadrado lleno. Por
 
  (0, 1, 1, 1, 1))
 """
+
+from ast import main
+import numpy as pd
+
+class Nonogram:
+    def __init__(self, clues):
+        self.clues = clues
+        self.clues_column = clues[0]
+        self.clues_row = clues[1]
+        self.size = len(self.clues_column)
+        self.board = pd.zeros((self.size,self.size), dtype=int)
+        self.board[0][0] = 1
+        self.board[0][1] = 1
+        self.board[0][2] = 1
+        self.board[0][3] = 1
+        self.board[0][4] = 1
+        self.board[1][0] = 1
+        self.board[1][1] = 1
+        self.board[1][2] = 1
+        self.board[1][3] = 1
+        self.board[1][4] = 1
+        self.board[2][0] = 1
+        self.board[2][1] = 1
+        self.board[2][2] = 1
+        self.board[2][3] = 1
+        self.board[2][4] = 1
+        self.board[3][0] = 1
+        self.board[3][1] = 1
+        self.board[3][2] = 1
+        self.board[3][3] = 1
+        self.board[3][4] = 1
+        self.board[4][0] = 1
+        self.board[4][1] = 1
+        self.board[4][2] = 1
+        self.board[4][3] = 1
+        self.board[4][4] = 1
+        print(self.board)
+        pass
+    def solve(self):
+        pass
+
+def solve_nonogram(clues):
+    nonogram = Nonogram(clues)
+    nonogram.solve()
+    return nonogram.board
+
+if __name__ == '__main__':
+    main()
