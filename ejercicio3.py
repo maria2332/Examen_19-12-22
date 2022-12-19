@@ -14,12 +14,33 @@ numbersOfLetters(1) --> ["one", "three", "five", "four"]
 """
 
 from ast import main
-import numpy as np
+import numpy as pd
 
-def numbersOfLetters(n):
-    # your code here
-    return
+def numeroLetras(numero):
+    if numero == 0:
+        return "zero"
+    if numero == 1:
+        return "one"
+    if numero == 2:
+        return "two"
+    if numero == 3:
+        return "three"
+    if numero == 4:
+        return "four"
+    if numero == 5:
+        return "five"
+    if numero == 6:
+        return "six"
+    if numero == 7:
+        return "seven"
+    if numero == 8:
+        return "eight"
+    if numero == 9:
+        return "nine"
+
+numeroLetras(60)
 
 if __name__ == "__main__":
     main()
-    
+
+
