@@ -19,9 +19,14 @@ from ast import main
 import numpy as np
 
 def contar_lunes(cumple, fecha_actual):
-    edad = fecha_actual.año - cumple.año # Calcular la edad de la persona en la fecha actual
+    fecha_actual = fecha_actual.datetime.now() # Obtener la fecha actual
+    año_nacimiento= int(input("Ingrese su año de nacimiento: "))
+    mes_nacimiento= int(input("Ingrese su mes de nacimiento: "))
+    dia_nacimiento= int(input("Ingrese su dia de nacimiento: "))
+    cumple = fecha_actual.datetime(año_nacimiento, mes_nacimiento, dia_nacimiento) # Obtener la fecha de cumpleaños de la persona
+    edad = fecha_actual - año_nacimiento # Calcular la edad de la persona en la fecha actual
     if edad >= 22 and edad <= 78: # Verificar si la persona está en edad de trabajar
-        return (fecha_actual - cumple).dias // 7 # Calcular el número de lunes que hay entre la fecha de cumpleaños y la fecha actual
+        return (fecha_actual - cumple) // 7 # Calcular el número de lunes que hay entre la fecha de cumpleaños y la fecha actual
     else:
         return 0
 
