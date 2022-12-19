@@ -16,7 +16,6 @@ Si la persona está en edad de trabajar, devolver el número de lunes calculado 
 """
 
 from ast import main
-import numpy as np
 
 def contar_lunes(cumple, fecha_actual):
     fecha_actual = fecha_actual.datetime.now() # Obtener la fecha actual
