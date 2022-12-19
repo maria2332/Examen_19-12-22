@@ -38,7 +38,15 @@ def numeroLetras(numero):
     if numero == 9:
         return "nine"
 
-numeroLetras(60)
+def numbersOfLetters(numero):
+    numero = []
+    numero.escrito=numero.append(numeroLetras(numero))
+    numero.
+    if len(numero.escrito) ==
+    
+
+
+
 
 if __name__ == "__main__":
     main()
