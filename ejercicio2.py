@@ -25,3 +25,13 @@ Advertencia:
 para mantenerlo más simple, la cadena en la entrada está restringida para representar solo polinomios multilineales no constantes, por lo que no encontrará algo como `-3 + yx ^ 2'. Multilineal significa en este contexto: de grado 1 sobre cada variable.
 la cadena de entrada puede contener variables arbitrarias representadas por caracteres en minúsculas en el alfabeto inglés.
 """
+
+from ast import main
+import numpy as np
+
+def simplify(poly):
+    # your code here
+    return poly
+
+if __name__ == '__main__':
+    main()
