@@ -30,12 +30,12 @@ def caballo(pos1, pos2):
     movimientos = 0 # Contador de movimientos
 
     while queue:
-        current_pos = queue.pop(0) # Obtenemos la posición actual
+        pos_actual = queue.pop(0) # Obtenemos la posición actual
 
-        if tablero[current_pos] == 1:
+        if tablero[pos_actual] == 1:
             break
 
-        mov_posibles = obtener_movimientos_posibles(current_pos)
+        mov_posibles = obtener_movimientos_posibles(pos_actual)
 
         for move in mov_posibles:
             if mov_valido(move, tablero):
@@ -47,10 +47,10 @@ def caballo(pos1, pos2):
 
 def algebraic_to_numeric(pos):
     # Obtenemos la fila y columna
-    row = int(pos[1]) - 1
+    fila = int(pos[1]) - 1
     col = ord(pos[0]) - ord('a')
 
-    return (row, col)
+    return (fila, col)
 
 def obtener_movimientos_posibles(pos):
     fila, col = pos
